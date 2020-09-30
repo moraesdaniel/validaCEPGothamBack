@@ -3,17 +3,18 @@ const validaCEPGotham = express();
 const zipCodeController = require("./zipCode/zipCodeController.js");
 const port = 1940;
 const bodyParser = require("body-parser");
+const cors = require("cors");
 global.db = require("./database/db.js");
 
 validaCEPGotham.use(bodyParser.urlencoded({extended: false}));
 validaCEPGotham.use(bodyParser.json());
+validaCEPGotham.use(cors());
 
 validaCEPGotham.listen(port, () => {
     console.log("ValidaCEPGotham listening at port " + port);
 });
 
 validaCEPGotham.get("/zipcodes", (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
     zipCodeController.findAll((error, zipCodes) => {
         if (error) { return res.json({error}); }
         
@@ -21,9 +22,7 @@ validaCEPGotham.get("/zipcodes", (req, res) => {
     });
 });
 
-validaCEPGotham.post("/zipcode", async (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
-
+validaCEPGotham.post("/zipcode", (req, res) => {
     var {zipCode, city} = req.body;
 
     if (!(zipCodeController.formatIsValid(zipCode))) {
@@ -34,17 +33,17 @@ validaCEPGotham.post("/zipcode", async (req, res) => {
         return res.send({error: "O CEP deve ser um número maior que " + zipCodeController.minRange + " e menor que " + zipCodeController.maxRange});
     }
 
-    await zipCodeController.findOne(zipCode, (error, result) => {
-        if (error) { return res.send({error})};
+    zipCodeController.findOne(zipCode, (error, result) => {
+        if (error) { return res.send({error: error.message}) };
 
         if (result.length > 0) {
             return res.send({error: "Esse CEP já está cadastrado para a cidade de " + result[0].city});
+        } else {
+            zipCodeController.add({zipCode, city}, (error, result) => {
+                if (error) { return res.send({error: error.message }) }
+        
+                res.send({msg: "CEP inserido com sucesso!"});
+            });
         }
-    });
-
-    zipCodeController.add({zipCode, city}, (error, result) => {
-        if (error) { return res.send({error}); }
-
-        res.send({msg: "CEP inserido com sucesso!"});
     });
 });
