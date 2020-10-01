@@ -8,6 +8,7 @@ Tabela de conteúdos
    * [Tecnologias](#tecnologias)
    * [Como executar](#como-executar)
       * [NodeJS](#nodejs)
+      * [MongoDB](#mongodb)	  
 <!--te-->
 
 ### Tecnologias
@@ -24,6 +25,11 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 - Realize o clone deste repositório para uma pasta de sua escolha
 - Através do prompt de comando, navegue até a pasta onde realizou o clone
 - Digite o comando `npm install`. Com este comando simples, o Node irá baixar todas as dependências necessárias para rodar seu projeto.
+#### MongoDB
+- Acesse o link de download do [MongoDB](https://www.mongodb.com/try?jmp=nav#community).
+- Como vamos realizar uma instalação local, clique na opção On-Premisses e depois na opção MongoDB Community Server, para encontrar o botão de download.
+- Rode o instalador do MongoDB. Na terceira tela do wizard, escolha o botão complete e na quarta tela a opção Run service as a local or domain user.
+- 
 
 - Inicialize o servidor do MongoDB
 	- Com o prompt de comando, vá até a pasta de instalação do Mongo, que deve ser algo parecido com c:\Program Files\MongoDB\Server\4.4\bin
@@ -33,3 +39,4 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 <h4 align="center"> 
 	🚧  Validador CEPs Gotham 🚀 Em construção...  🚧
 </h4>
+
