@@ -7,7 +7,7 @@ Tabela de conteúdos
 <!--ts-->
    * [Tecnologias](#tecnologias)
    * [Como executar](#como-executar)
-      *[NodeJS](#nodejs)	
+      * [NodeJS](#nodejs)
 <!--te-->
 
 ### Tecnologias
