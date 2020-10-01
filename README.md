@@ -7,6 +7,7 @@ Tabela de conteúdos
 <!--ts-->
    * [Tecnologias](#tecnologias)
    * [Como executar](#como-executar)
+      *[NodeJS](#nodejs)	
 <!--te-->
 
 ### Tecnologias
@@ -19,7 +20,7 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 
 ### Como executar
 #### NodeJS
-- Para começar a montar o ambiente, você precisa instalar o [NodeJS](https://nodejs.org/en/) no seu ambiente. Dica: Sempre opte pela versão LTS pois é a mais estável. No momento em que este projeto foi desenvolvido, a LTS era a 12.18.4.
+- Para começar, você precisa instalar o [NodeJS](https://nodejs.org/en/) no seu ambiente. Dica: Sempre opte pela versão LTS pois é a mais estável. No momento em que este projeto foi desenvolvido, a LTS era a 12.18.4.
 - Realize o clone deste repositório para uma pasta de sua escolha
 - Através do prompt de comando, navegue até a pasta onde realizou o clone
 - Digite o comando `npm install`. Com este comando simples, o Node irá baixar todas as dependências necessárias para rodar seu projeto.
