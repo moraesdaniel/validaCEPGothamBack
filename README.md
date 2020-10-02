@@ -9,8 +9,8 @@ Tabela de conteúdos
    * [Como executar](#como-executar)
       * [MongoDB](#mongodb)	  	 
       * [NodeJS](#nodejs)
-			* [Mocha](#mocha)
-			* [Chai](#chai)
+      * [Mocha](#mocha)
+      * [Chai](#chai)			
       * [PM2](#pm2)
       * [Testes automatizados](#testes-automatizados)
 <!--te-->
@@ -49,4 +49,4 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 - Para instalar o mesmo, digite o seguinte comando no seu prompt: `npm install pm2 -g`.
 - Para colocar o back-end no ar, navegue até a pasta do seu projeto com o prompt de comando e digite o seguinte comando: `pm2 start index.js --name validaCEPGotham`. Agora você pode até fechar essa janela do prompt que o pm2 se encarregará de manter seu back-end rodando. O parâmetro `--name`, serve para nomear o processo dentro do pm2. Isso facilita quando você quiser derrubar o serviço por exemplo, basta digitar `pm2 stop validaCEPGotham`.
 #### Testes automatizados
-- Com tudo rodando, basta navegar até a pasta do projeto com o prompt de comando e digitar `mocha` para rodar os testes e visualizar os resultados.
+- Para executar os testes automatizados é muito simples, basta navegar até a pasta do projeto com o prompt de comando e digitar `mocha` para rodar os testes e visualizar os resultados.
